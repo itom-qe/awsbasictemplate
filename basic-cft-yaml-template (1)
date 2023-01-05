@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: A sample template
+Resources:
+  MyEC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties: 
+      ImageId: "ami-0d382e80be7ffdae5" #This is a Linux AMI - Use ami-05b5ec21fbb3e1c0e for Mumbai and ami-0d382e80be7ffdae5 for usw1
+      InstanceType: t2.micro
+      KeyName: admin-Default
+      BlockDeviceMappings:
+        -
+          DeviceName: /dev/sdm
+          Ebs:
+            VolumeType: io1
+            Iops: 200
+            DeleteOnTermination: false
+            VolumeSize: 20
+      SubnetId: subnet-025d6f2b249cd4f1b
