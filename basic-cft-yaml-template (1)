@@ -5,8 +5,8 @@ Resources:
     Type: "AWS::EC2::Instance"
     Properties: 
       ImageId: "ami-0d382e80be7ffdae5" #This is a Linux AMI - Use ami-05b5ec21fbb3e1c0e for Mumbai and ami-0d382e80be7ffdae5 for usw1
-      InstanceType: t2.micro
-      KeyName: admin-Default
+      InstanceType: t3.micro
+      KeyName: admin-Default123
       BlockDeviceMappings:
         -
           DeviceName: /dev/sdm
